@@ -1,13 +1,10 @@
-def solution(n):
-    x = int(n)
-    print(x)
-    
-    result = 0
-    for i in range(x+1):
-        string = str(i)
-        for j in string:
-            if j == '0':
-                result += 1
-    
-    return result
-print(solution('99'))
+def solution(S):
+    N = int(S)
+    i = 0
+    while N >= 0:
+        i += str(N).count('0')
+        N -= 1
+    return i
+
+
+print(solution('219'))
