@@ -1,10 +1,13 @@
-def solution(S):
-    N = int(S)
-    i = 0
-    while N >= 0:
-        i += str(N).count('0')
-        N -= 1
-    return i
+def number_of_zeros(S):
+    P = 1410000017
+    Z = 0
+    N = 0
+    F = 0
+    for j in range(len(S)):
+        F = (10*F + N + P - Z*(9-int(S[j])) ) % P
+        if S[j] == '0':
+            Z += 1
+        N = (10*N + int(S[j])) % P       
+    return ((1 + F) % P)
 
-
-print(solution('219'))
+print(number_of_zeros('219'))
