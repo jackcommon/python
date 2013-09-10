@@ -1,0 +1,9 @@
+A new kind of cannon is being tested. The cannon shoots cannonballs in a fixed direction. Each cannonball flies horizontally until it hits the ground, and then it rests there. Cannonballs are shot from different heights, so they hit the ground at different points.
+You are given two zero-indexed arrays, A and B, containing M and N integers respectively. Array A describes the landscape in the direction along with the cannon is shooting. Elements of array A represent the height of the groud, going from the cannon outwards. Array B contains levels from which consecutive cannonballs are shot.
+Assume that a cannonball is shot at level H.
+    . Let I be the smallest index, such that 0 < I < M and A[I] >= H. The cannonball falls at position I - 1 and increase the ground level A[I-1] by 1.
+    . If there is no such I, and H > A[I] for all <= I < M, then the cannonball flies beyond the horizon and has no effect on the result.
+    . If H <= A[0], then the cannonball ricochets away and has no effect on the result either.
+Write a function:
+    def solution(A, B)
+that, given arrays A and B, simulates the flight of the cannonballs and returns 
