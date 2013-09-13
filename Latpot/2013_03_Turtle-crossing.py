@@ -1,38 +1,24 @@
 def turtle_crossing(A):
-    alist = []
-    alist.append([0,0])
-    x = 0
-    y = 0
-##    print('fefes')
-    for step, value in enumerate(A):
-        if step % 4 == 0:
-            for i in range(value):
-                y = y+1
-                if [x,y] in alist:
-                    return step+1
-                else:
-                    alist.append([x,y])
-        elif step % 4 == 1:
-            for i in range(value):
-                x = x+1
-                if [x,y] in alist:
-                    return step+1
-                else:
-                    alist.append([x,y])
-        elif step % 4 == 2:
-            for i in range(value):
-                y = y-1
-                if [x,y] in alist:
-                    return step+1
-                else:
-                    alist.append([x,y])
-        elif step % 4 == 3:
-            for i in range(value):
-                x = x-1
-                if [x,y] in alist:
-                    return step+1
-                else:
-                    alist.append([x,y])
+    aset = {(0,0)}
+    x, y = 0, 0
+    stepscount = 1
+    for walk, value in enumerate(A):
+        if walk % 4 == 0:
+            temp = {(x,y+(i+1)) for i in range(value)}
+            y += value
+        elif walk % 4 == 1:
+            temp = {(x+(i+1),y) for i in range(value)}
+            x += value
+        elif walk % 4 == 2:
+            temp = {(x,y-(i+1)) for i in range(value)}
+            y -= value
+        elif walk % 4 == 3:
+            temp = {(x-(i+1),y) for i in range(value)}
+            x -= value
+        aset = aset.union(temp)
+        stepscount += value
+        if (stepscount != len(aset)):
+            return(walk+1)
     return 0
 
 
