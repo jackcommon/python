@@ -1,0 +1,17 @@
+A rectangle is called rectilinear if its edges are all parallel to coordinate axes. Such a rectangle can be described by specifying the coordinates of its bottom-left and top-right corners.
+Write a function
+    def solution(dlx1, bly1, trx1, try1, blx2, bly2, trx2, try2)
+that, given eight integers representing two rectilinear rectangles (one with lower-left corner (K, L) and upper-right corner (M, N), and another with lower-left corner (P, Q) and upper-right corner (R, S)), returns the area of their intersection. The function should return 0 if the intersection is a point or a line segment, or if the rectangles do not intersect. The function should return -1 if the eara of the intersection exceeds 2,147,483,647.
+Assume that:
+    . blx1, bly1, trx1, try1, blx2, bly2, trx2 and try2 are integers within the range [-2147483648..2147483647]
+
+For example, given integers:
+    K = 0   L = 2   M = 5   N = 10
+    P = 3   Q = 1   R = 20  S = 15
+the function should return 16.
+
+The intersection of the two rectangles is a rectilinear rectangle whose lower-left corner is (3,2) and upper-right corner is (5,10), and its are equals 16.
+
+Complexity:
+    . expected worst-case time complexity is O(1);
+    . expected worst-case space complexity is O(1);
