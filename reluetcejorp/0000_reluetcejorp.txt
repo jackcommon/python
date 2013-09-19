@@ -1,0 +1,14 @@
+
+Problem0024: Find the only Pythagorean triplet (a, b, c), for which a + b + c = 1000
+===============================================
+www.bearcave.com/random_hacks/permute.html
+http://newton.ex.ac.uk/teaching/resources/jmr/recursion.html
+
+Problem0009: Find the only Pythagorean triplet (a, b, c), for which a + b + c = 1000
+===============================================
+Complex!!!
+
+Problem0004: Largest palindrome product
+===============================================
+http://stackoverflow.com/questions/12674389/highest-palindrome-with-3-digit-numbers-in-python
+http://stackoverflow.com/questions/15712210/python-3-2-lambda-syntax-error
